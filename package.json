@@ -1,0 +1,26 @@
+{
+  "name": "roman-to-int",
+  "version": "0.1.0",
+  "description": "convert roman numerals into integers.",
+  "keywords": [
+    "roman",
+    "number",
+    "integer",
+    "int"
+  ],
+  "author": {
+    "name": "Joao p Dubas",
+    "email": "joao.dubas@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joaodubas/node-roman-to-int.git"
+  },
+  "engines": {
+    "node": ">= 0.10.x"
+  },
+  "devDependencies": {
+    "mocha": "1.12.x",
+    "expect.js": "0.2.x"
+  }
+}
