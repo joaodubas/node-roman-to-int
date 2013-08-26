@@ -3,20 +3,29 @@ var parser = require('../lib/parser.js');
 
 describe('hundred', function () {
   it('Identify string with values between 100 and 300', function () {
-    expect(parser.hundred.test('c')).to.be(true);
-    expect(parser.hundred.test('cc')).to.be(true);
-    expect(parser.hundred.test('ccc')).to.be(true);
+    var numbers = ['c', 'cc', 'ccc'];
+    numbers.forEach(function(number) {
+      expect(number.match(parser.hundred).length).to.be.equal(1);
+      expect(number.match(parser.hundred)[0]).to.be.equal(number);
+    });
   });
   it('Identify string with values between 400 and 500', function () {
-    expect(parser.hundred.test('cd')).to.be(true);
-    expect(parser.hundred.test('d')).to.be(true);
+    var numbers = ['cd', 'd'];
+    numbers.forEach(function(number) {
+      expect(number.match(parser.hundred).length).to.be.equal(1);
+      expect(number.match(parser.hundred)[0]).to.be.equal(number);
+    });
   });
   it('Identify string with values between 600 and 800', function () {
-    expect(parser.hundred.test('dc')).to.be(true);
-    expect(parser.hundred.test('dcc')).to.be(true);
-    expect(parser.hundred.test('dccc')).to.be(true);
+    var numbers = ['dc', 'dcc', 'dccc'];
+    numbers.forEach(function(number) {
+      expect(number.match(parser.hundred).length).to.be.equal(1);
+      expect(number.match(parser.hundred)[0]).to.be.equal(number);
+    });
   });
   it('Identify string with values between 900', function () {
-    expect(parser.hundred.test('cm')).to.be(true);
+    var number = 'cm';
+    expect(number.match(parser.hundred).length).to.be.equal(1);
+    expect(number.match(parser.hundred)[0]).to.be.equal(number);
   });
 });

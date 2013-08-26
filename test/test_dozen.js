@@ -3,20 +3,29 @@ var parser = require('../lib/parser.js');
 
 describe('Dozen', function () {
   it('Identify string with values between 10 and 30', function () {
-    expect(parser.dozen.test('x')).to.be(true);
-    expect(parser.dozen.test('xx')).to.be(true);
-    expect(parser.dozen.test('xxx')).to.be(true);
+    var numbers = ['x', 'xx', 'xxx'];
+    numbers.forEach(function(number) {
+      expect(number.match(parser.dozen).length).to.be.equal(1);
+      expect(number.match(parser.dozen)[0]).to.be.equal(number);
+    });
   });
   it('Identify string with values between 40 and 50', function () {
-    expect(parser.dozen.test('xl')).to.be(true);
-    expect(parser.unity.test('l')).to.be(true);
+    var numbers = ['xl', 'l'];
+    numbers.forEach(function(number) {
+      expect(number.match(parser.dozen).length).to.be.equal(1);
+      expect(number.match(parser.dozen)[0]).to.be.equal(number);
+    });
   });
   it('Identify string with values between 60 and 80', function () {
-    expect(parser.dozen.test('lx')).to.be(true);
-    expect(parser.dozen.test('lxx')).to.be(true);
-    expect(parser.dozen.test('lxxx')).to.be(true);
+    var numbers = ['lx', 'lxx', 'lxxx'];
+    numbers.forEach(function(number) {
+      expect(number.match(parser.dozen).length).to.be.equal(1);
+      expect(number.match(parser.dozen)[0]).to.be.equal(number);
+    });
   });
   it('Identify string with value 90', function () {
-    expect(parser.dozen.test('xc')).to.be(true);
+    var number = 'xc';
+    expect(number.match(parser.dozen).length).to.be.equal(1);
+    expect(number.match(parser.dozen)[0]).to.be.equal(number);
   });
 });
