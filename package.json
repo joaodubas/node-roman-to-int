@@ -12,6 +12,9 @@
     "name": "Joao p Dubas",
     "email": "joao.dubas@gmail.com"
   },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/joaodubas/node-roman-to-int.git"
